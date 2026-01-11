@@ -14,7 +14,9 @@ const routes: Routes = [
   { path: 'contactus', component: Contact},
   {path:'customer',component:Customer},
   {path:'customerdetails',component:CustomerDetails},
-  {path:'movies/:id',component:MovieDetails}
+  {path:'movies/:id',component:MovieDetails},
+  {path:'products',loadChildren:()=>import('./products/products.module').then(m=>m.ProductModule)},
+  {path:'',redirectTo:'products',pathMatch:'full'} //default route
 ];
 
 @NgModule({

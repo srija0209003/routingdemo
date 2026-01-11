@@ -9,6 +9,7 @@ import { Contact } from './contact/contact';
 import { Customer } from './customer/customer';
 import { MovieDetails } from './movie-details/movie-details';
 import { CustomerDetails } from './customer-details/customer-details';
+import { ProductModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { CustomerDetails } from './customer-details/customer-details';
     Contact,
     Customer,
     MovieDetails,
-    CustomerDetails
+    CustomerDetails,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProductModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
